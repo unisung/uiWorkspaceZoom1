@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상선택자</title>
+<style>
+		h1{color:red;}
+		h1:hover{background: orange;}/* 마우스를 올렸을 때*/
+		h1:active {background: yellow;}/* 마우스를 눌렀을 때 */
+		input[type="text"]{color:blue;}
+		input[type="text"]:focus{color:red;}
+		input[type="text"]:disabled{background: yellow;}
+</style>
+</head>
+<body>
+<h1>가상 선택자  :상태, :이벤트 </h1>
+<form>
+    <input type="text"><br>
+    <input type="password"><br>
+    <input type="text" disabled="disabled"><br>
+</form>
+    
+
+</body>
+</html>

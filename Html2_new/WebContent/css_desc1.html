@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자손 후손 선택자</title>
+<style>
+       input[type="text"]{ background-color: yellow;}
+       input[type="password"]{background-color: green;}
+       li{color:red;}
+       ul>li{ background: yellow;}
+       ul>li>ul{color:green;}
+       ul ul{color:green;}
+       div h1{color:red}
+       div h1,h1{color:green;}
+       
+</style>
+</head>
+<body>
+
+<form>
+   <input type="text" name="id"><br>
+   <input type="password" name="pwd"><br>
+   <input type="submit" value="전송">
+</form>
+<div>
+<ul>메뉴
+    <li>한식
+      <ul>
+         <li>비빔밥</li>
+         <li>된장국</li>
+      </ul>
+      </li>
+      <li>중식
+     <ul>
+         <li>짜장</li>
+         <li>짬뽕</li>
+      </ul>
+      </li>
+ </ul>
+
+ <h1>제목</h1>
+</div>
+<h1>제목</h1>
+</body>
+</html>

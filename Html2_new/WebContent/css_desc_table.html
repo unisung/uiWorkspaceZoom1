@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css 테이블 적용시 주의</title>
+<style>
+ /* 테이블 생성시 <tbody>가 추가됨 */
+      table  tr > th{ background-color: orange;}
+</style>
+</head>
+<body>
+<h1>테이블</h1>
+<table>
+    <tr>
+      <th>제목1</th><th>제목2</th>
+    </tr>
+    <tr>
+      <td>내용1</td><td>내용2</td>
+    </tr>
+</table>
+
+</body>
+</html>

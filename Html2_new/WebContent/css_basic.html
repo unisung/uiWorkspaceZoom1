@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 스타일</title>
+<style>
+      h1{background: yellow;}
+      h1, h2, h3{color:red}/* 여러개의 태그에 동일 속성 적용*/
+      #head{border: 1px solid black;}
+      .a{border: 2px dotted red;} /* 다른태그에 동일한 스타일 적용 */
+      .b{background: orange;}
+      .c{color: blue; font-size:large; font-weight: bold;}
+</style>
+</head>
+<body>
+ <h1>스타일 적용</h1>
+ <h1 id="head">제목1</h1>
+ <h2>제목1</h2>
+ <h3 class="a">제목1</h3>
+ 
+ <p class="a b c">Lorem ipsum sit amet.</p>
+</body>
+</html>

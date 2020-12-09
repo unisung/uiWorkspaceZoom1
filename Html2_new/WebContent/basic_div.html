@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5이전의 영역구분</title>
+<style>
+		div{border: 1px solid black;}
+		#header, #nav, #footer {width: 600px; height: 100px;}
+		#header{background: red;}
+		#nav{background: green;}
+		#footer{background:orange;}
+		#aside1, #aside2, #content{width: 200px; float: left; height: 100px;}
+		#content{background: yellowgreen;}
+		#footer{clear: both;}/* float속성 제거 */
+</style>
+</head>
+<body>
+  <div id="header">제목 영역</div>
+  <div id="nav">메뉴영역</div>
+  <div id="aside1">본문 왼쪽 영역</div>
+  <div id="content">본문영역
+    <div id="article1">첫번째 내용</div>
+    <div id="article2">두번째 내용</div>
+    <div id="article3">세번째 내용</div>
+  </div>
+  <div id="aside2">본문 오른쪽 영역</div>
+  <div id="footer">footer영역</div>
+
+</body>
+</html>

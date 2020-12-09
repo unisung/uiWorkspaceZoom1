@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form태그들</title>
+</head>
+<body>
+<h1>form 태그</h1>
+<form method="post">
+         <fieldset>
+            <legend>필수입력</legend>
+            id:<input type="text" name="id" placeholder="아이디"><br>
+            이름:<input  name="name" placeholder="이름"><br><!-- input type의 default타입은 text -->
+            비번:<input  type="password" name="password" placeholder="비번"><br>
+            생년월일:<input type="date" name="birth"><br>
+            가입일:<input type="datetime-local" name="가입일"><br>  
+            <!-- form태그내의 input태그에 name을 지정하지않으면 해당요소의 데이타는 전송안됨. -->
+            성별:<input type="radio" name="성별" value="남" checked="checked">남
+                   <input type="radio" name="성별" value="여">여<br>
+                   
+            <!-- 화면에 보이지 않고 데이타 저장용으로 사용되는 태그 hidden 타입  -->
+            <input type="hidden" name="국적" value="한국">
+         
+         </fieldset>
+         <fieldset>
+            <legend>선택입력</legend>
+          취미:  <input type="checkbox" name="취미" value="독서">독서
+            <input type="checkbox" name="취미" value="영화감상">영화감상
+            <input type="checkbox" name="취미" value="game">게임
+            <br>
+           가입경로:
+           <select name="route">
+             <optgroup label="미디어">
+                <option>광고</option>
+                <option>이메일</option>
+             </optgroup>
+             <optgroup label="기타">
+                <option>지인소개</option>
+                <option>프로모션</option>
+             </optgroup>
+           </select> 
+         </fieldset>
+      <br>
+      <!-- ?id=&name=&password=&birth=&국적=한국&route=광고  , name=value형태로 전송 -->
+     <input type="submit" value="가입하기"><input type="reset" value="초기화">
+
+</form>
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>구조 선택자</title>
+<style>
+	ul{overflow: hidden; }/* 콘텐츠(내용물)가 영역을 벗어난 경우 처리 속성overflow:visible, hidden, scroll, auto */
+	li{ list-style: none; /* bullet제거 */
+	    float: left;/* 블럭요소 를 왼쪽에서 오른쪽 순으로 옆으로 배열*/
+	    padding:15px;
+	}
+	li:first-child {border-radius: 10px 0 0 10px;/* 왼쪽상단부터 시작,시계방향으로 적용 */}
+	li:last-child {border-radius: 0 10px 10px 0;/* 왼쪽상단부터 시작,시계방향으로 적용 */}
+	
+	li:nth-child(2n){background-color: rgb(255, 153, 153);}/*색상값 R2자리,G2자리,B2자리*/
+	li:nth-child(2n+1){background-color: #BCE55C;}
+</style>
+</head>
+<body>
+     <ul>
+     	<li>첫 번째</li>
+     	<li>두 번째</li>
+     	<li>세 번째</li>
+     	<li>네 번째</li>
+     	<li>다섯 번째</li>
+     	<li>여섯 번째</li>
+     	<li>일곱 번째</li>
+     </ul>
+
+</body>
+</html>
