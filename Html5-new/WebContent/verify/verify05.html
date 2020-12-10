@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 작성하기</title>
+</head>
+<body>
+<h1>글 작성하기</h1><!-- 제목용 태그 h1~h6 -->
+  <form action="" method="get"><!-- action속성:전송될 주소(페이지), method:전송방식(get,post) -->
+     <!-- label태그와 input 태그는 인라인요소  -->
+     <label><b>작성자</b></label><input type="text" name="writer"><br>
+     <label><b>아이디</b></label><input name="id"><br><!-- input태그는 default type이 text -->
+     <label><b>이메일</b></label><input name="mailId">@<input name="domain"><br>
+     <label><b>휴대폰</b></label>
+     <select name="phone1">
+     <option>010</option>
+     <option>011</option>
+     <option>017</option>
+     </select>-<input name="phone2" maxlength="4">-<input name="phone3" maxlength="4"> <br>
+     <label><b>글제목</b></label><input name="title"><br>
+     <label><b>내용</b></label><textarea rows="6" cols="20"></textarea><br>
+     <input type="submit" value="제출"><!-- 다른페이지로 이동하는 기능 type=submit -->
+     
+  </form>
+</body>
+</html>

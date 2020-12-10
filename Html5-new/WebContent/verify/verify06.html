@@ -1,0 +1,28 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  /* 태그 선택자*/
+		table{background-color: gray;}
+		input{border-radius: 8px 8px 8px 8px;}	/* html의 기본 폰트크기 16px*/
+		input[type="submit"]{width: 180px;}
+		th{text-align: right;}
+		td{text-align: left;'}
+</style>
+</head>
+<body>
+  <h1>입력 양식</h1>
+
+  <table border="1">
+  <!-- 스타이 지정시 script에서 적용이 안되는 경우 요소의 속성중 style속성의 값으로 지정 하면
+        속성으로 지정한 값이 우선순위가 높아서 먼저 적용됨.  -->
+      <tr><th colspan="2" style="text-align: center;"><h2>간단한 입력 양식</h2></th></tr>
+      <tr><th colspan="2"></th></tr>
+      <tr><th><b>아이디</b></th><td><input type="text" name="id"></td></tr>
+      <tr><th><b>비밀번호</b></th><td><input type="password" name="pwd"></td></tr>
+      <tr><th></th><td><input type="submit" value="제출"></td></tr>
+      <tr><th colspan="2"></th></tr>
+  </table>
+</body>
+</html>
