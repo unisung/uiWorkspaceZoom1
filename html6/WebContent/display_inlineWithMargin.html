@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>inline요소 마진</title>
+<style>
+   *{border: 1px dotted red;}
+   #box{
+   		display: inline;
+   		background: red;
+   		/* 인라인이므로 적용 안됨*/
+   		width: 100px;
+   		height: 100px;
+   		/* 인라인요소의 마진과 패딩은 좌/우만 적용됨 */
+   		margin: 10px;/* 10px 10px 10px 10px ;*/
+   }
+</style>
+</head>
+<body>
+<p>의미 없는 더미 객체</p>
+<span>더미 객체</span>
+<div id="box">대상 객체</div>
+<span>더미 객체</span>
+<p>의미 없는 더미 객체</p>
+</body>
+</html>

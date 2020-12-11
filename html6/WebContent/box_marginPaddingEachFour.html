@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>box 스타일</title>
+<style>
+      /* padding과 borde두께가 커지더라도 안쪽 컨텐츠는 100X100크기 유지 
+          콘텐츠를 감싸는 박스 영역만 커짐.
+      */
+	div{width: 100px; height: 100px; background-color: orange;
+	      
+	      margin: 0 30px ;/* 마주보는 테두리끼리 적용 */
+	      padding: 0 30px ;
+	    /*  border: thick dashed blue; *//* 속성값 나열하면 자동 인식*/
+	    border-width: thick;/* 개별적 적용 */
+	    border-style: dotted;
+	    border-color: black;
+	   /* border:black;*//* border속성값을 판단하여 적용*/
+	}
+	 
+</style>
+</head>
+<body>
+ <div></div>
+</body>
+</html>
