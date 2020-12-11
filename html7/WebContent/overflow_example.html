@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>overflow-hidden</title>
+<style>
+  div.container{border: 1px dotted red;
+           overflow: hidden;/* 해당 box영역내의 요소들이 float속성일때 아래의 p태그가 옆으로 붙는 경우 해결하는 속성 */
+  }
+	div.item{
+	     float: left;
+	     margin: 0 3px;
+	     padding:10px;
+	     border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, cnsectetur adipiscing elit.</p>
+  <div class="container">
+  	<div class="item">메뉴 -1 </div>
+  	<div class="item">메뉴 -2 </div>
+  	<div class="item">메뉴 -3 </div>
+  	<div class="item">메뉴 -4 </div>
+  </div>
+  <p>Lorem ipsum dolor sit amet, cnsectetur adipiscing elit.</p>
+</body>
+</html>

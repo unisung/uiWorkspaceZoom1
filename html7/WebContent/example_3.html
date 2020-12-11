@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{border: 1px solid blue;}
+	
+	/* div태그 내의 요소중에 클래스가 item인것 */
+	div .item{
+	 float: left;
+	 margin: 0 3px;/* top과 bottom마진 0, lef/right 마진 3px;*/
+	}
+	.clear{clear: both;}
+	
+	div.container{ overflow: hidden;}/*영역을 벗어난 부분 안보이기 */
+	p{width: 300px; height: 200px; border: 1px solid red; overflow: scroll;}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="item">메뉴 - 1</div>
+    <div class="item">메뉴 - 2</div>
+    <div class="item">메뉴 - 3</div>
+    <div class="item">메뉴 - 4</div>
+</div>
+
+    <div class="clear"></div>
+ 
+    <div class="item">메뉴 - 5</div>
+    <div class="item">메뉴 - 6</div>
+    <div class="item">메뉴 - 7</div>
+    <div class="item">메뉴 - 8</div>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta magna eget enim scelerisque, non convallis justo pellentesque. Integer sed sapien sapien. Maecenas erat nisi, sodales eu fermentum at, condimentum a dui. Morbi facilisis libero massa, eget commodo odio sagittis eget. Integer varius vestibulum tempus. Ut interdum eros libero, sed bibendum nibh ornare ut. Aliquam cursus vitae ipsum a dapibus. Fusce sit amet pharetra nibh. Donec imperdiet tincidunt nulla.</p>
+
+
+</body>
+</html>
