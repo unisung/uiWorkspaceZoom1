@@ -42,8 +42,9 @@
        		float: left; position: relative;/* .inner-menu요소들의 부모   */
        }
        /* navi 메뉴 메뉴 over시 반전 처리 */
-       .outer-menu-item:hover{background: black; color: white;}
-       
+       .outer-menu-item:hover > span{background: black; color: white;}
+       .outer-menu-item:hover >ul{display: block;}
+         
        .menu-title{
        		display: block;
        		height: 30px; line-height: 30px;/* 블럭에서 수직 중앙정렬*/
