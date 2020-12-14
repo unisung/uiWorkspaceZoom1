@@ -1,0 +1,67 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"><title>전체 페이지</title>
+<style>
+    *{margin: 0; padding : 0;}
+.container{width: 1080px; border: 1px solid black; margin: 0 auto 8px; overflow: hidden;}
+div.left{width: 740px; height: 428px; float: left;background: orange;margin-right:5px; margin-top: 8px; margin-bottom: 8px;}
+div.right{width: 332px; height: 428px; float: left; background: yellowgreen; margin-top: 8px; margin-bottom: 8px;}
+ 
+ ul.gnb{float: left; padding: 8px 0px; background: green;    }
+    ul.gnb > li{
+    				list-style: none;
+    				float: left;
+    				padding-left: 16px;
+    }
+    ul.gnb > li:first-child{    		padding-left: 0px; }
+    ul.rank{float: right; background: yellow; padding-top: 8px; padding-bottom: 8px;}
+    ul.rank > li{list-style: none;}
+ .footer{
+ 		background: yellow;
+ 		height: 80px;
+ }   
+ 
+ body{background: url('../media/BackgroundFront.png'); background-repeat: no-repeat; background-size: cover;}
+ .container > h1 {display:inline;  margin-right: 20px;}
+</style>
+</head>
+<body>
+<!-- 추가합니다. -->
+<!-- 별다른 스타일 처리 없습니다. -->
+<div class="container">
+	<h1>Logo</h1><img alt="logo" src="../image/logo.png">
+</div>
+<!-- (2)번 문제와 같습니다. -->
+<div class="container">
+	<ul class="gnb">
+	<li>메일</li>
+	        <li>카페</li>
+	        <li>블로그</li>         
+	        <li>쇼핑</li>         
+	        <li>사전</li>
+	        <li>뉴스</li>
+	        <li>증권</li>
+	        <li>부동산</li>
+	        <li>지도</li>
+	</ul>
+	<ul class="rank">
+		<li>실시간 검색 순위</li>
+	</ul>
+</div>
+<!-- (1)번 문제와 같습니다. -->
+<div class="container">
+	<div class="left"></div>
+	<div class="right"></div>
+</div>
+<!-- (1)번 문제와 같습니다: 2개 배치했습니다. -->
+<div class="container">
+	<div class="left"></div>
+	<div class="right"></div>
+</div>
+<!-- 추가합니다. -->
+<div class="container">
+<!-- 높이를 80px로 지정했습니다. -->
+	<div class="footer"></div>
+</div>
+
+</body>
+</html>

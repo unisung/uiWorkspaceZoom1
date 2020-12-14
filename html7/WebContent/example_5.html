@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Absolute position</title>
+<style>
+		*{margin:0;padding:0;}/* 전체 선택자 */
+		
+		body{background: red;}
+		
+		#container{
+				/* 색상 및 크기 적용*/
+				width: 500px; height: 250px;
+				background: orange;
+				
+				/* 위치 설정*/
+				position: absolute; /* 1.position을 absolute로 설정*/
+				left: 50%;/*2. 폭과 높이를 50%로 지정 */
+				top:50%;
+				/*  마진을 음수로 지정하여 조정 */
+				margin-left: -250px; /* 3. 시작점을 전체 폭/높이의 절반 만큼 옆/위로 이동*/
+				margin-top: -125px; 
+		}
+</style>
+</head>
+<body>
+ <div id="container">
+ 	<h1>요소의 중앙 배치</h1>
+ </div>
+</body>
+</html>
