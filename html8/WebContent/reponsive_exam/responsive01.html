@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*  1.모든 태그(*)의 margin 속성과 padding 속성을 0으로 지정합니다.
+         2. li 태그의 list-style-type을 none으로 지정합니다 */
+    *{margin: 0; padding:0;}
+    li{list-style-type: none;}
+    
+    /*   
+      ➊ div.content 태그의 padding을 16px로 지정합니다.
+      ➋ li 태그의 위아래 padding 속성을 24px로 지정합니다.
+      ➌ li 태그의 아래쪽 테두리를 1px solid #c7c7c7로 지정합니다  
+    */
+    div.content{padding: 16px;}
+    li{padding-top:24px; padding-bottom: 24px; border-bottom: 1px solid #c7c7c7; }
+    
+    /*
+    ➊ 세로 상태에서는 div.left 태그가 보이지 않게 만듭니다.
+    ➋ 가로 상태에서는 div.left 태그가 너비의 30%를 차지하고, 왼쪽에 붙게 만듭니다.
+    ➌ 가로 상태에서는 div.right 태그가 너비의 70%를 차지하고 오른쪽에 붙게 만듭니다.  
+    */
+    @media screen and (orientation: landscape){
+    	div.left{width: 30%; float:left;}
+    	div.right{width: 70%; float:right;}
+    }
+    @media screen and (orientation: portrait){
+    	div.left{display:none;}
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="left">
+            <div class="content">
+                <h1>List</h1>
+                <ul>
+                    <li>Velit ipsum ullamco</li>
+                    <li>Nulla qui officia anim</li>
+                    <li>quis proident tempor ipsum</li>
+ 	                    <li>et sunt sit culpa ad</li>
+                    <li>fugiat reprehenderit sint mollit.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h1>Lorem ipsum</h1>
+                <p>Sunt nostrud consequat</p>
+                <p>Aute do et ullamco</p>
+                <p>Deserunt irure Lorem</p>
+                <p>Velit ipsum ullamco et</p>
+                <p>Sunt nostrud consequat</p>
+                <p>Aute do et ullamco</p>
+                <p>Deserunt irure Lorem</p>
+                <p>Velit ipsum ullamco et</p>
+                <p>Sunt nostrud consequat</p>
+                <p>Aute do et ullamco</p>
+                <p>Deserunt irure Lorem</p>
+                <p>Velit ipsum ullamco et</p>
+                <p>Sunt nostrud consequat</p>
+                <p>Aute do et ullamco</p>
+                <p>Deserunt irure Lorem</p>
+                <p>Velit ipsum ullamco et</p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
