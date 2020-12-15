@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수 선언과 대입</title>
+<script type="text/javascript">
+ var pi;//선언
+ console.log('변수pi의 값:',pi);
+ console.log('변수pi의 타입:',typeof(pi));
+ 
+ //자바스크립트에서 변수의 타입은 선언시가 아니고 대입시에 결정됨
+ pi=3.141592;//대입
+ console.log('변수pi의 값:',pi);
+ console.log('변수pi의 타입:',typeof(pi));
+
+ //자바스크립트에서 변수의 타입은 선언시가 아니고 대입시에 결정됨
+ pi='myPie';
+ console.log('변수pi의 값:',pi);
+ console.log('변수pi의 타입:',typeof(pi));
+ 
+ var radius=10;
+ pi=3.141592;//대입
+ 
+ alert('원의 넓이는:'+radius*radius*pi);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

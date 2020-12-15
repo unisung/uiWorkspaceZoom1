@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>논리연산</title>
+<script>
+  	/* 부정 논리 ! */
+	console.log(!true);
+	console.log(!(10==10));
+	
+	// 논리곱 &&, 비트 논리곱(&)
+	console.log(true& true, true&& false, false&& true, false & false);//
+	console.log((10<20) && (20<30),(10<20) & (20<30));
+	
+	// 논리합 ||, 비트 논리합(|)
+	console.log(true| true, true|| false, false|| true, false | false);//
+	console.log((10<20) || (20<30),(10<20) | (20<30));
+	
+	//논리비교
+	if(true& true){
+		alert('참');
+	}else{
+		alert('거짓');
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

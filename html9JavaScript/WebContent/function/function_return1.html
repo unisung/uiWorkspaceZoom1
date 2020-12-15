@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 종류</title>
+<script>
+  var i=10;
+  //매개값을 받고 결과를 리턴하는 함수
+  //자바스크립트의 function앞에는 리턴 타입 없음.
+  //return 값;
+  function f1( obj1, obj2, obj3 ){//매개변수 선언시 타입을 변수앞에 쓰지않음.
+	  return obj1+","+obj2+','+obj3;
+  }
+  //매개값을 받고 결과를 리턴하지 않는 함수
+  function f2(obj1,obj2){
+	  alert(obj1+","+obj2);//함수내에 return문장이 없음.
+  }
+  //매개값은 안받고 결과를 리턴하는 함수
+  function f3(){
+	 return 'hello!!!!';
+  }
+  //매개값은 안받고 결과도 리턴하지 않는 함수
+  function f4(){
+	  alert(i);//return문 없음
+  }
+  
+  //호출
+  var result1=f1('hong','홍길동','010-111-1234');
+  console.log(result1);
+  f2('hong','1233');
+  var result2=f3();
+  console.log(result2);
+  f4();
+  
+</script>
+</head>
+<body>
+
+</body>
+</html>

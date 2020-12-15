@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내림차 순 정렬하기</title>
+<script type="text/javascript">
+   var scores=[88,75,95,80];
+   
+   var temp=0;
+   
+   for(var i=0; i<scores.length; i++){
+	    for(var j=i+1;j<scores.length;j++){
+	    	 if(scores[i] < scores[j]){
+					temp=scores[i];
+					scores[i]=scores[j];
+					scores[j]=temp;
+	    	 }
+	    }
+   }
+   
+   //출력
+   for(var k=0;k<scores.length;k++)
+	   alert(scores[k]);
+   
+  
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
