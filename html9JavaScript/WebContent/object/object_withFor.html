@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>object</title>
+<script>
+   //객체 선언 javascript notation(자바스크립트 표현법) object-> json객체
+   //key:value 저장
+  var product={
+		   제품명:'7D 건조 망고',
+		  유형:'당절임',
+		  성분:'망고, 설탕, 메타중아황산나트륨, 치자황색소',
+           원산지:'필리핀'   
+   };//product라는 객체 선언
+   
+   //변수명['키'] 표기법
+   console.log(product['제품명']);
+   console.log(product['유형']);
+   console.log(product['성분']);
+   console.log(product['원산지']);
+   
+   //변수명.키 표기법 
+   console.log(product.제품명);
+   console.log(product.유형);
+   console.log(product.성분);
+   console.log(product.원산지);
+</script>
+<script>
+	//객체는 index로 접근 불가 
+	//for(변수 in 객체){실행문;}
+	console.log('제품명' in product);// 키 in 객체 참조변수 -> 키가 객체에 존재하면 true
+	console.log('유형' in product);
+	console.log('성분' in product);
+	console.log('원산지' in product);
+	console.log('' in product);// 키가 객체에 존재하지 않으면 false
+	
+	for( var key in product){
+		  alert(key +" : "+product[key]);
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

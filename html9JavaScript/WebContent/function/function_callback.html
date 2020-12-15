@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>콜백함수</title>
+<script>
+		//함수 선언
+		function callTenTimes( callback ){
+			//10회 반복
+			for(var i=0;i<10;i++){
+				callback();//매개변수로 전달된 함수 호출
+			}
+		}
+		
+		//익명함수 선언
+		var call = function(){
+			alert('함수호출');
+		 };
+		 
+		 //호출
+		 callTenTimes(call);
+		 
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>object 생성</title>
+<script>
+	var object={
+			numer:273,
+			string:'rintainata',
+			boolean: true,
+			array:[52,273,102,32],
+			method:function(){
+				alert('mymethod');
+			}
+	}
+
+	 console.log(object.boolean);
+	console.log(object.array);
+	object.method();//객체의 메소드 호출
+	
+	//객체 속성 추가
+	  object['list']=['a','b','c'];
+	
+	console.log(object.list);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
