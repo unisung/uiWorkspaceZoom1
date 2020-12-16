@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자기자신을 가리키는 this</title>
+<script>
+	//객체 선언
+	var person={
+			  name:'홍길동',
+			  eat:function (food){
+				  alert(this.name+'이(가) '+food+'을/를 먹습니다.');//this.속성 해당객체의 속성임을 가리킴.
+			  }
+	};
+	
+	//메소드 호출
+	person.eat('밥');
+</script>
+</head>
+<body>
+
+</body>
+</html>

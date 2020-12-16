@@ -5,18 +5,45 @@
 <title>object 객체</title>
 <script>
       //과제
+      //var blist=[];
 		var blist=['A','B','A','AB','O','B','O','AB','B'];
 		//혈액형 객체 생성, 혈액형별 숫자를 값으로 가지는 속성 추가
 		// bleed ={A:2, B:3, AB:2, O:2}
 		
+		
 		bleed={};//빈객체 생성
-		bleed['A']=1;//{'A':1}
-		bleed['A']=2;//{'A':2}
-		bleed['B']=3;//{'A':2, 'B':3,}
 		
-		//반복문을 사용하여 추가 for(var 변수 in bleed)
-			
+		console.log('A' in bleed);
 		
+
+		/* for(var i =0;i<blist.length;i++){
+			  console.log( blist[i], blist[i] in bleed);
+		} */
+		
+		//bleed['A']=1;//{'A':1}
+		
+		//bleed['A']=2;//{'A':2}
+		//bleed['B']=3;//{'A':2, 'B':3,}
+		//bleed['AB']=2;
+		//bleed['O']=2;
+		
+		
+		console.log(bleed['A'],bleed['B'],bleed['AB'],bleed['O']);
+	
+		for(var i =0;i<blist.length;i++){
+			  console.log( blist[i], blist[i] in bleed);
+			  if(blist[i] in bleed){//bleed객체에  'A'가 있으면 값을 1 증가
+				  bleed[blist[i]]++;
+			  }else{
+				  bleed[blist[i]]=1; //bleed객체에 'A'가 없다면 최초로 1로 저장
+			  }
+		}
+		
+	
+	for(var key in bleed){
+		console.log(key+':'+ bleed[key]);
+	}
+
 </script>
 </head>
 <body>

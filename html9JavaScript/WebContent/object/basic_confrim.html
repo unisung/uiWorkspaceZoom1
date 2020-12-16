@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>확인용 메세지 출력 함수 confirm()</title>
+<script>
+     function  checkConfirm(){
+    	 //문서내의 객체의 접근 .으로 접근
+    	/* alert(document.forms[0].id.value);
+    	 alert(document.forms[0].pwd.value); */
+    	 if(document.forms[0].id.value==''){
+    		 alert('id를 입력하세요'); 
+    		 return false;
+    	 }
+    	 if(document.forms[0].pwd.value==''){
+    		 alert('비번을 입력하세요'); 
+    		 return false;
+    	 }
+    	 
+    	 var yesno = confirm('전송할까요?');//리턴결과값은 true/false
+    	 alert(yesno);
+    	 if(yesno==false) return false;//submit버튼의 기본동작 멈춤
+     }
+</script>
+</head>
+<body>
+   
+   <form>
+     <fieldset>
+       <legend>필수 입력사항</legend>
+
+       <label>id:</label> <input type="text" name='id'><br>
+       <label>비번:</label><input type="password" name='pwd'><br>
+      <input type="submit" value="전송" onclick="return checkConfirm()">
+    </fieldset>
+   </form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 객체</title>
+<script>
+    //배열
+    //자바스크립트 표기법
+    var arr1 = [];//빈 배열 생성, main(String[] args){}와 유사함
+    console.log('빈 배열 arr1의 길이:',arr1.length);
+    arr1[0]=1;
+    arr1[1]={};//빈 객체 저장
+    arr1[2]=[1,2,3];
+    console.log('객체 저장 후 배열 arr1의 길이:',arr1.length);
+    for(var i=0;i<arr1.length;i++) console.log(arr1[i]);
+    
+    //배열 생성자 호출 
+    var arr2=new Array();
+    console.log('빈 배열 arr2의 길이:',arr2.length);
+    arr2[0]=1;
+    arr2[1]={};//빈 객체 저장
+    arr2[2]=[1,2,3];
+    console.log('객체 저장 후 배열 arr2의 길이:',arr2.length);
+    for(var i=0;i<arr2.length;i++) console.log(arr2[i]);
+    
+    //객체
+    //자바스크립트 표기법 (javascript notation)
+    var person1={};
+    console.log(person1);
+    person1['id']='hong';
+    console.log(person1);
+    person1['name']='홍길동';
+    console.log(person1);
+    person1['age']=18;
+    console.log(person1);
+    
+    //객체 생성자 호출
+   var person2=new Object();
+   console.log(person2);
+   person2['id']='kim';
+   person2['pwd']='1234';
+   person2['getId']=function(){return this.id;}
+   console.log(person2);
+
+   </script>
+</head>
+<body>
+
+</body>
+</html>
