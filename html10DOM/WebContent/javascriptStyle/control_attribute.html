@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM BASIC</title>
+<script>
+			//이벤트 연결
+		window.onload=function(){
+				 //변수 선언
+				 var image=document.getElementById('image');
+				 
+				 //속성변경
+				 //image.src='http://placehold.it/300x200';
+				 //image.width=300;
+				 //image.height=200;
+				 
+				 //setAttribute(속성명,값);
+				 image.setAttribute('src','http://placehold.it/300x200');
+				 image.setAttribute('width',300);
+				 image.setAttribute('height',200);
+				 
+				 //getAttribute(속성명);
+				 alert(image.getAttribute('src'));
+				 
+			};
+
+</script>
+</head>
+<body>
+   <img id="image">
+</body>
+</html>

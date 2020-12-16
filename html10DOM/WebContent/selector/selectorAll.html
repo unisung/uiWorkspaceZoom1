@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>querySelectorAll()로 접근</title>
+<script>
+//객체에 이벤트 연결
+window.onload=function(){
+	//같은 요소명을 가진 객체로 접근 하는함수 document.querySelectorAll(태그명);
+       var headers =document.querySelectorAll('h1');//모든 h1태그 선택
+       for(var i=0;i<headers.length;i++){
+    	    var header=headers[i];
+       //문서 객체 조작;
+       header.style.color='orange';
+       header.style.background='red';
+       header.innerHTML='<span>From JavaScript</span>';
+       }
+   };
+</script>
+</head>
+<body>
+
+<h1 id='header'><span>header</span></h1>
+<h1><span>header</span></h1>
+<h1><span>header</span></h1>
+
+</body>
+</html>

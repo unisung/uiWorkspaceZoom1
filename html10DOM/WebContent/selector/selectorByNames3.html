@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체명으로 접근</title>
+<script>
+//객체에 이벤트 연결
+window.onload=function(){
+	//같은 요소명을 가진 객체로 접근 하는함수 document.querySelectorAll(태그명);
+      // var id =document.forms[0].id;
+      var id =document.frm.id;
+      
+       //문서 객체 조작;
+       id.style.color='orange';
+       id.style.background='red';
+       id.value='hong';
+      
+   };
+</script>
+</head>
+<body>
+   	<form name="frm">
+   		<label>아이디:</label><input type="text" name="id"><br>
+   		<label>비번:</label><input type="password" name="pwd"><br>
+   		<input type="submit" value="전성">
+   </form>
+
+</body>
+</html>

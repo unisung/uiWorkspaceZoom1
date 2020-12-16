@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innerHTML</title>
+ <script type="text/javascript">
+	 //이벤트 연결
+	 window.onload=function(){
+		  //변수 선언
+		  var output='';
+		  for(var i=0;i<10;i++){
+			  output +='<h1>Header - ' + i + '</h1>';
+		  }
+		  alert(output);
+		  //문서 객체 내부의 글자 변경
+		  //document.body.textContent=output;//글자로 출력
+		 //document.body.innerText=output;
+		  document.body.innerHTML=output;//html로 출력
+		  
+		  alert('html:'+document.body.innerHTML);
+		  alert('text:'+document.body.innerText);
+		  
+	 };
+ 
+ </script>
+</head>
+<body>
+
+</body>
+</html>

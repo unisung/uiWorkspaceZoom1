@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>id로 접근</title>
+<script>
+//객체에 이벤트 연결
+window.onload=function(){
+	//요소를 id명으로접근 하는함수 document.getElementById(아이디);
+       var header =document.getElementById('header');
+       //문서 객체 조작;
+       header.style.color='orange';
+       header.style.background='red';
+       header.innerHTML='<span>From JavaScript</span>';
+   };
+</script>
+</head>
+<body>
+
+<h1 id='header'><span>header</span></h1>
+<h1><span>header</span></h1>
+<h1><span>header</span></h1>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>interval(콜백,실행간격)</title>
+<script>
+   //이벤트 연결
+   window.onload=function(){
+	     //문서 객체 연결
+	     var clock = document.getElementById('clock');
+	     //1초마다 함수를 실행
+	     setInterval(function(){
+			var now=new Date();//현재 날짜 시각 정보 객체 생성
+			clock.innerHTML = now.toString();
+		}, 1000);
+   }
+
+</script>
+</head>
+<body>
+ <h1 id="clock"></h1>
+</body>
+</html>

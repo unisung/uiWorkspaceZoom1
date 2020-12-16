@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>timeOut</title>
+<script>
+var myVar;
+
+//이벤트 연결
+window.onload=function myFunction() {
+	//setTimeout(콜백함수,time);
+  myVar = setTimeout(function(){ alert("Hello"); }, 3000);
+}
+
+//3초 전에 클릭시 timeout함수 해제됨.
+function myStopFunction() {
+	//setTimeout해제 clearTimeout(아이디);
+  clearTimeout(myVar);
+}
+</script>
+</head>
+<body>
+<p>Click the first button to alert "Hello" after waiting 3 seconds.</p>
+<p>Click the second button to prevent the first function to execute. (You must click it before the 3 seconds are up.)</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="myStopFunction()">Stop the alert</button>
+</body>
+</html>
