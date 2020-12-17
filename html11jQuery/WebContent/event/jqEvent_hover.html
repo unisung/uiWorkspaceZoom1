@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover()</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+		//이벤트 연결
+		//선택자.hover(hover시콜백,hover해제시 콜백);
+		$(document).ready(function(){
+			//이벤트 연결
+			$('h1').hover(function(){
+				//색상변경
+				$(this).css({background:'red', color:'white'});	
+			}
+			,function(){
+				//색상제거
+				$(this).css({background:'',color:''});
+			});
+		});
+</script>
+</head>
+<body>
+ <h1>Click</h1>
+</body>
+</html>

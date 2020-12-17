@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>기본 이벤트 </title>
+<script>
+		  window.onload=function(){
+			   var button = document.getElementById('button');
+			   
+			   //기본 이벤트 동작 제거
+			   button.onclick=function(){
+				    return false;
+			   }
+		  }
+</script>
+</head>
+<body>
+  <a id="button" href="http://hanbit.co.kr">버튼</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>regeExp</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	 $().ready(function(){
+		 $('form').submit(function(event){
+			 var value=$('input').val();//val()-값 추출, val(값)-값 설정
+			 alert(value);
+			 
+			 //유효성 검사
+			 // /[검사할패턴]/g
+			 if(value.replace(/[가-힣]/g,'').length==0){
+				 alert('유효성 통과');
+			 }else{
+				 alert('한글만 입력해주세요');
+				 event.preventDefault();//기본동작 제거
+			 }
+		 });
+		 
+	 });
+</script>
+</head>
+<body>
+   <form>
+      <label>이름</label>
+      <input type="text" name="name">
+      <input type="submit">
+   </form>
+</body>  
+</html>

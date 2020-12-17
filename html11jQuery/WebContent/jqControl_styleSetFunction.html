@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function - index</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+     $().ready(function(){
+    	 //문서 객체 추가
+    	 var output='';
+    	 for(var i=0;i<256;i++){
+    		 output +='<div></div>';
+    	 }
+    	 document.body.innerHTML=output;
+
+    	 // 스타일을 적용합니다.
+    	 $('div').css({height:2, 
+    		              backgroundColor:function(index){
+    		            	                      return 'rgb('+index+','+index+','+index+')';
+    		            	                      }
+    	                  });
+     });
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

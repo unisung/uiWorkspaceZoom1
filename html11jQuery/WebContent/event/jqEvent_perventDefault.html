@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>preventDefault</title>
+<title>on({})</title>
+<!-- 라이브러리 연결 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- 자바스크립트 -->
+<script>
+  $(document).ready(function(){
+	    $('a').click(function(event){//링크태그  a에서 발생한 event객체를 함수의 매개변수로 받음
+	    	   alert('click');
+	        
+	    //기본 이벤트 제거
+	     event.preventDefault();
+	    });
+	  
+  });
+
+</script>
+</head>
+<body>
+  <a href="http://hanbit.co.kr">Hanbit Media</a>
+</body>
+</html>

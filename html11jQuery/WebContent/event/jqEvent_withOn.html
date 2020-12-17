@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>on()</title>
+<!-- 라이브러리 연결 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- 자바스크립트 -->
+<script>
+            //window.onload=functioin(){}
+            $().ready(function(){
+            	//스타일 적용
+            	$('.box').css({'float':'left',
+            		                'margin':'10px',
+            		                'width':'100px',
+            		                'height':'100px',
+            		                'backgroundColor':'orange',
+            		                'border':'1px solid blue'
+            		                })
+            		                .on('click',function(){$(this).css('background','red');})
+            		                .on('mouseenter',function(){$(this).css('background','blue');})
+            		                .on('mouseleave',function(){$(this).css('background','orange');});
+            	
+            });
+
+</script>
+</head>
+<body>
+
+  <div class="box"></div>
+
+</body>
+</html>
