@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+   function check(){
+	  var id=document.getElementById('id').value;
+	  window.open("myPage.html?id="+id,"_blank","windth=300,height=200");
+   }
+</script>
+</head>
+<body>
+    <form name="frm">
+    		<input type="text" id="id" name="id"><input type="button" value="확인"  onclick="check()"><br>
+    		<input type="submit" value="전송">
+    
+    </form>
+
+</body>
+</html>

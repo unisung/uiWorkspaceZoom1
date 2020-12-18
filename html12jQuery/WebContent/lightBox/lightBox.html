@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- Add jQuery lightBox plugin stylesheet in the <head>. This styles the lightbox itself, not your gallery thumbnails. -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.lightbox.css" media="screen" />
+	<script type="text/javascript" src="js/jquery.1.2.3.js"></script>
+<!-- Add jQuery lightBox plugin script to the end of the DOM -->
+<!-- Make sure there is a jQuery framework, loaded, before the plugin script loads -->
+<script type="text/javascript" src="js/jquery.lightbox.min.js"></script>
+<script>
+     $(document).ready(function(){
+    	  $('a.light').lightBox();
+    	 // $('img.light').lightBox();
+     });
+</script>
+</head>
+<body>
+  <a class="light" href="./photos/image1.jpg"><img class="light" src="./photos/image1.jpg"></a>
+  <a class="light" href="./photos/image2.jpg"><img class="light" src="./photos/image2.jpg"></a>
+  <a class="light" href="./photos/image3.jpg"><img class="light" src="./photos/image3.jpg"></a>
+  <br>
+  
+  <img class="light" src="./photos/image1.jpg">
+  <img class="light" src="./photos/image2.jpg">
+  <img class="light" src="./photos/image3.jpg">
+
+</body>
+</html>

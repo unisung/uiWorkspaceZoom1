@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+   function myChecked(){
+	   //operner쪽으로 데이타 전송
+	    opener.frm.id.value=document.getElementById('id').value;
+	    self.close();//자신 닫기
+   }
+</script>
+</head>
+<body>
+<form>
+    <input type="text" name="id" id="id" value='hong2'><br>
+    <input type="button" value="close" onclick="myChecked()">
+</form>
+</body>
+</html>
