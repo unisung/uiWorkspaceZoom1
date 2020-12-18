@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>gallery</title>
+<style>
+    body{margin: 0 auto;}
+	div.item:nth-child(1){background: blueviolet;}  /* $(속성선택자).attr(속성명); 속성값 */
+	div.item:nth-child(2){background: red;}
+	div.item:nth-child(3){background: burlywood;} /*선택자에 의해 선택되 요소들은 배열로 전달, length는 선택된 요소 갯 수*/
+	div.item:nth-child(4){background: orange;} 
+</style>
+<!-- 라이브러리 연결 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+            var count=0;
+            var width=0;
+            var height=0;
+
+              //첫 번째 ready 이벤트 
+             $(document).ready(function(){
+            	 //변수를 선언
+            	 width=$('[data-role="slider"]').attr('data-width');//$(속성선택자).attr(속성명); 속성값 얻기
+            	 height=$('[data-role="slider"]').attr('data-height');
+            	 count=$('[data-role="slider"] div.item').length;//선택자에 의해 선택되 요소들은 배열로 전달, length는 선택된 요소갯수
+            	
+            	//alert(count);
+            	 
+            	 //스타일 적용
+            	 $('[data-role="slider"]').css({
+            		   position:'relative', 
+            		  overflow:'hidden', 
+            		   width:width,
+            		   height:height
+            	 }).find('.container').css({
+            		   position:'absolute', 
+            		   width:count*width,
+            		   overflow: "hidden",
+            	 }).find('.item').css({
+            		 width:width, 
+            		 height:height, 
+            		 float:'left'
+            	 });
+            	 
+             });
+              
+           //두 번째 ready 이벤트
+         	$(document).ready(function(){
+         		//변수 선언
+         		var currentPage = 0;
+         		var changePage=function(){
+         			$('[data-role="slider"]>.container').animate({left:-currentPage * width},1000);//animate()d,밀리초
+         		}
+         		//이벤트 연결
+         		$('#left-button').click(function(){
+         			if(currentPage > 0){
+         				//왼쪽으로 이동
+         				currentPage = currentPage -1;
+         				change();
+         			}
+         		});
+         		$('#right-button').click(function(){
+         			if(currentPage < count-1){
+         				//오른쪽으로 이동
+         				currentPage = currentPage+1;
+         				changePage();
+         			}
+         		});
+         		
+         		
+         	});
+         	
+         </script>
+         </head>
+
+<body>
+	<div data-role="slider" data-width="500" data-height="300">
+		<div class="container">
+			<div class="item">
+				<h1>Lorem ipsum dolor sit amtet</h1>
+				<p>Lorem ipsum dolor sit amet, consectetor</p>
+				<img src="./photos/image1.jpg">
+			</div>
+			<div class="item">
+				<h1>Lorem ipsum dolor sit amtet</h1>
+				<p>Lorem ipsum dolor sit amet, consectetor</p>
+				<img src="./photos/image2.jpg">
+			</div>
+			<div class="item">
+				<h1>Lorem ipsum dolor sit amtet</h1>
+				<p>Lorem ipsum dolor sit amet, consectetor</p>
+				<img src="./photos/image3.jpg">
+			</div>
+			<div class="item">
+				<h1>Lorem ipsum dolor sit amtet</h1>
+				<p>Lorem ipsum dolor sit amet, consectetor</p>
+				<img src="./photos/image4.jpg">
+			</div>
+		</div><!-- <div class="container"> -->
+	</div><!-- <div data-role="slider" data-width="500" data-height="300"> -->
+	
+	<button id="left-button"> << </button>
+	<button id="right-button"> >> </button>
+	
+</body>
+</html>
