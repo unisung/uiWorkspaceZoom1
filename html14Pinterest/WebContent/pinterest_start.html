@@ -17,18 +17,22 @@
     
     .header-search-form{float: left;}
     .header-menu{float: right;}
-    .header-title{position: absolute; width: 200px; height: 40px; left: 50%; margin-left: -100px; background: url('./images/logo.png'); background-repeat: no-repeat; text-indent: -9999px;}
+    .header-title{position: absolute; width: 200px; height: 40px; left: 50%; margin-left: -100px; 
+                      background: url('./images/logo.png'); background-repeat: no-repeat; text-indent: -9999px;}
     </style> 
     
     <!-- 드롭다운 --> 
     <style> 
-    .outer-menu{ float: left; width: 100px; height: 200px; padding: 10px 0; position: relative; 
+    .outer-menu{ float: left; width: 100px; height: 20px; line-height:20px;  padding: 10px 0; position: relative; 
                        text-align: center; font-size: 13px; font-weight: bold; z-index: 9999;
     }
     .outer-menu:hover{background: #E1dfdf;}
     .inner-menu{background: #fff; margin-top: 10px; width: 100%; border-top:1px solid #cccaca;
-                        box-shadow: 0 2px 4px  rgba(34, 25,25,0.5); display: none;}
-    .inner-menu a:hover{background: #E1dfdf;}
+                        box-shadow: 0 2px 4px  rgba(34, 25,25,0.5); display:none;}
+                        
+   .inner-menu a {  display:block; padding: 5px 10px; z-index: 5000; }
+ 
+   .inner-menu a:hover{background: #E1dfdf;}
     </style>
      
     <!-- 네비게이션 메뉴 --> 
@@ -41,31 +45,106 @@
     <!-- 검색 양식 --> 
     <style> 
      .header-search-form{height: 26px; padding: 7px; }
-     .input-search{display: block; background-color: #fff; border: 1p solid #ccc; border-radius: 15px 0 0 15px; 
+     .input-search{display: block; background-color: #fff; border: 1px solid #ccc; border-radius: 15px 0 0 15px; 
                            width: 120px ;height: 24px; padding: 0 0 0 10px; font-size:12px; color:#555; float: left;}
      .input-search:focus{border-color: rgba(82,168,236, 0.8); outline:0; box-shadow: inset 0 1px 1px rgba(0,0,0, 0,05);}
-     .input-search-submit{display: block; float: left; width: 50px; height: 26px; border-radius: 0 15px 15px 0;
+     .input-search-submit{display: block; float: left; width: 50px; height: 24px; border-radius: 0 15px 15px 0;
       border:1px solid #ccc; margin-left: -1px; vertical-align: top; display: inline-block;}
      
     </style> 
     <!-- 종이 스타일 --> 
     <style> 
-
+     .paper{width: 190px; margin-bottom: 10px;padding: 15px 15px 0; font-size: 11px; background: #fff;box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);}
+     .paper-content{margin: 0 -15px; margin-top: 10px;padding: 10px 15px; background: #f2f0f0; overflow: hidden;}
+     .paper-description{margin: 10px 0;}
+     .paper-link{display: block; float: left;}
+     .paper-text{float: left; width: 150px; margin-left: 10px;}
     </style> 
     <!-- 섹션 --> 
     <style> 
-
+    /* 미디어 쿼리 미지원 웹 브라우저*/
+    #main-section{width: 920px; margin: 0 auto;}/* 콘텐츠 중앙 배치 */
+    /* 세줄*/
+    @MEDIA (max-width:919px) { /* 0~919*/
+	   #main-section{width: 690px;}
+}
+    /* 네줄*/
+    @media (min-width:930px) and(max-width:1149px){ /*920~1149*/
+    #main-section{width:920px;}}
+    /* 다섯줄*/
+    @media (min-width:1150px) and (max-width:1379px){/* 1150~1379*/
+    #main-section{width:1150px;}
+    /* 여섯줄*/
+    @medai (min-width:1380px){ /* 1380 ~ */
+    	#main-section{width:1380px;}
+    }
     </style> 
+    
     <!-- 라이트박스 --> 
     <style> 
-
+    #darken-background{position: absolute; top: 0;left:0; height: 100%; display:none; background: rgba(0,0,0,0.9); z-index: 10000; overflow-y:scroll;}
+    #lightbox{ width: 700px; margin: 20px auto; padding: 15px; border:1px solid #333; border-radius: 5px; 
+                   background: white; box-shadow: 0 5px 5px rgba(35,235,25,0.4); text-align: center;}
+    .user-information{overflow: hidden; text-align: center;}
+    .user-information .image{float: left; width: 70px; }
+    .user-information .text{float: left; width:620px;}
+    .lightbox-splitter{margin: 10px 0;}
+    
+    
+    
     </style> 
     <!-- 라이브러리 연결 -->
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script> 
     <script src="./js/jquery.masonry.min.js"></script> 
     <script src="./js/jquery.imagesloaded.min.js"></script> 
+    <!-- 스크립트 -->
     <script>
+ // 풀다운 메뉴
+    $(document).ready(function () {
+        // 풀다운 메뉴
+        $('.outer-menu').hover(function () {
+            $(this).find('.inner-menu').css('display', 'block');
+        }, function () {
+            $(this).find('.inner-menu').css('display', 'none');
+        });
+    });
 
+
+   $(document).ready(function(){
+			$('#main-section').imagesLoaded(function(){
+				$('#main-section').masonry({itemSelector:'.paper', columnWidth:230, isAnimated:true});
+			});   
+   });
+   
+   //라이트박스
+   $(document).ready(function(){
+	 function showLightBox(){
+		 //라이트박스 보이게 처리
+		 $('#darken-background').show();//이미지 보이게 처리
+		 $('#darken-background').css('top',$(window).scrollTop());
+		 //스크롤 못하게 처리
+		 $('body').css('overflow','hidden');
+	 }   
+	 
+	 function hideLightBox(){
+		 //라이트박스 안보이게 처리
+		 $('#darken-background').hide();
+		 
+		 //스크롤 하게 처리
+		 $('body').css('overflow','');
+		 
+	 }
+	 
+	 //라이트 박스 제거 이벤트
+	 $('#darken-background').click(function(){hideLightBox();});
+	 
+	 //클릭이벤트
+	 $('.paper').click(function(){showLightBox();});
+	 
+	 //라이트박스 제거 이벤트 보조
+	 $('#lightbox').click(function(event){event.stopPropagation();});
+   });
+  
     </script> 
 </head> 
 <body> 
@@ -343,8 +422,8 @@
     <div id="darken-background"> 
         <div id="lightbox"> 
             <div class="user-information"> 
-                <a class="" href="#"><img src="http://placehold.it/70x70" /></a> 
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem mi, egestas a facilisis eget, egestas ut magna.</p> 
+                <a class="image" href="#"><img src="http://placehold.it/70x70" /></a> 
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem mi, egestas a facilisis eget, egestas ut magna.</p> 
             </div> 
             <img src="http://placehold.it/600x750" /> 
         </div> 

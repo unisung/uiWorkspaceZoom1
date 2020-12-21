@@ -4,15 +4,20 @@
 <meta charset="UTF-8">
 <title>Document Object Model</title>
 <script>
+function f1(){}
+</script>
+</head>
+<body>
+   <h1 onclick="f1()">Process - 1</h1>
+   <h2>Process - 2</h2>
+<script>
 	//h1태그의 배경색상 변경
 	document.querySelector('h1').style.backgroundColor='red';
 	//h2태그의 글자색 변경
 	document.querySelector('h2').style.color='blue';
+	
+	
 </script>
-</head>
-<body>
-   <h1>Process - 1</h1>
-   <h2>Process - 2</h2>
 </body>
 
 </html>
